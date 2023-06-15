@@ -1,0 +1,18 @@
+# data
+dataset: weibo
+max_word_length: 60
+
+# train
+max_epoch: 150
+batch_size: 256
+
+contextual_transform:
+    output_dim: 768
+    input_fc: false
+    num_layers: 2
+    num_heads: 12
+    dropout: 0.1
+    use_context: true
+    atn_ct_num_layers: 2
+    atn_ct_num_heads: 12
+    pooler: avg
