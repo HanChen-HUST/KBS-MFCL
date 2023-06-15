@@ -21,6 +21,6 @@
  # Run
  Train and test
  ```
- cd ./MFDA
+ #cd ./MFDA
  python ./Weibo/test.py -c ./Weibo/configs/weibo.yaml
  ```
