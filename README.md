@@ -21,6 +21,5 @@
  # Run
  Train and test
  ```
-
  python ./Weibo/test.py -c ./Weibo/configs/weibo.yaml
  ```
