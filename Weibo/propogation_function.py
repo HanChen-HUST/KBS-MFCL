@@ -35,7 +35,7 @@ def cal_pagerank(edge_index, damp: float = 0.85, iter: int = 1000):
     try:
         pagerank_list = nx.pagerank(G, alpha=damp, max_iter=iter)
     except Exception:
-        print("在默认迭代次数中没有收敛")
+        print("do not converge in the default number of times")
     pagerank_list = list(pagerank_list.values())
     x = torch.tensor(pagerank_list).to(edge_index.device).to(torch.float32)
     return x
