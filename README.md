@@ -1,4 +1,4 @@
-# MFDA 
+# MFCL 
   Source code for 2023 SDM under review paper Multi-modal Fake News Detection with Cross-Modal and Graph-Level
 Contrastive Learning
 # Dataset
