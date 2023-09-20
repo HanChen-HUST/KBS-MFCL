@@ -1,5 +1,5 @@
 # MFCL 
-  Source code for 2023 SDM under review paper Multi-modal Fake News Detection with Cross-Modal and Graph-Level
+  Source code for SDM 2024 under review paper Multi-modal Fake News Detection with Cross-Modal and Graph-Level
 Contrastive Learning
 # Dataset
   The datasets used in the experiments were based on the two publicly available Weibo and PHEME datasets released by Zheng et al. (2023) and Zubiaga et al. (2017).
