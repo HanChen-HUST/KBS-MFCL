@@ -11,7 +11,7 @@ from munch import *
 from torch_geometric.loader import DataLoader
 from propogation import *
 from propogation_function import get_augmented_by_drop_edge, get_augmented_by_node_mask,get_augmented_by_node_mask_eignvector,get_augmented_by_drop_edge_eignvector,get_augmented_by_drop_edge_degree,get_augmented_by_node_mask_degree
-from model import MFDA
+from model import MFCL
 from dataset import *
 
 import warnings
@@ -91,7 +91,7 @@ def trainer(configs, dataname, id_train, id_test):
             optITM.step()
         loss = loss_all / len(train_loader)
         print(loss)
-    model = MFDA(configs, alpha).to(device)
+    model = MFCL(configs, alpha).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
     train_dataset, test_dataset = loadData(dataname, id_train, id_test)
     train_dataloader = DataLoader(train_dataset, batch_size=configs.batch_size, shuffle=True)
