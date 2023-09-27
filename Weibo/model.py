@@ -3,9 +3,9 @@ import torch.nn as nn
 from propogation import TextImage_Transformer
 
 
-class MFDA(nn.Module):
+class MFCL(nn.Module):
     def __init__(self, configs, alpha):
-        super(MFDA, self).__init__()
+        super(MFCL, self).__init__()
         self.alpha = alpha
         self.contextual_transform = TextImage_Transformer(
             configs.contextual_transform, configs.contextual_transform.output_dim)
@@ -33,9 +33,9 @@ class MFDA(nn.Module):
 
     def forward(self, e, f, c):
         e_length = len(e)
-        e_f_mask = torch.ones(e_length, 1).cuda()
-        f_e_mask = torch.ones(e_length,1).cuda()
-        c_e_mask = torch.ones(e_length,1).cuda()
+        e_f_mask = torch.ones(e_length, 1).to(e.device)
+        f_e_mask = torch.ones(e_length,1).to(e.device)
+        c_e_mask = torch.ones(e_length,1).to(e.device)
         text_image = self.fc(torch.cat([e,f],dim=-1)).unsqueeze(dim=1)
     
         e = torch.unsqueeze(e,dim=1)
