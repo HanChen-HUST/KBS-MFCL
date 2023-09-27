@@ -156,8 +156,8 @@ class ObjectiveLoss_TextImage(nn.Module):
         root_feature, img  = batch_data.root_feature,batch_data.img
 
         root_length = len(root_feature)
-        root_img_mask = torch.ones(root_length, 1).cuda()
-        img_root_mask = torch.ones(root_length, 1).cuda()
+        root_img_mask = torch.ones(root_length, 1).to(img.device)
+        img_root_mask = torch.ones(root_length, 1).to(img.device)
         root_feature = torch.squeeze(root_feature, dim=1) 
         root_feature = self.text_attention(root_feature,root_img_mask)
 
