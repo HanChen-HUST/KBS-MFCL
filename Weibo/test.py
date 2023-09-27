@@ -18,7 +18,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser(description="code")
-parser.add_argument('--gpu', '-g', type=int, default=7, help='gpu id')
+parser.add_argument('--gpu', '-g', type=int, default=0, help='gpu id')
 parser.add_argument('--config', '-c', dest='config', help='config file', type=argparse.FileType('r', encoding="utf-8"), required=True)
 parser.add_argument('--seed', '-s', type=int,  default=100, help='seed')
 parser.add_argument('--alpha', '-a', type=float,  default=0.7, help='alpha')
@@ -47,7 +47,7 @@ print(torch.cuda.is_available())
 
 
 alpha = args.alpha
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda:'+gpu_id if torch.cuda.is_available() else 'cpu')
 loss_func = F.cross_entropy
 
 
