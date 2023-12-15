@@ -1,5 +1,5 @@
 # MFCL 
-  Source code for SDM 2024 under review paper **M**ulti-modal **F**ake News Detection with Cross-Modal and Graph-Level
+  Source code for DASFAA 2024 under review paper **M**ulti-modal **F**ake News Detection with Cross-Modal and Graph-Level
 **C**ontrastive **L**earning(MFCL)
 # Dataset
   The datasets used in the experiments were based on the two publicly available Weibo and PHEME datasets released by Zheng et al. (2023) and Zubiaga et al. (2017).
