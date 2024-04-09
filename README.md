@@ -1,5 +1,5 @@
 # MFCL 
-  Source code for IPM under review paper **M**ulti-modal **F**ake News Detection with Cross-Modal and Graph-Level
+  Source code for IPM under review paper **M**ulti-modal Robustness **F**ake News Detection with **M**ross-Modal and Propagation Network Contrastive **L**earning
 **C**ontrastive **L**earning(MFCL)
 # Dataset
   The datasets used in the experiments were based on the two publicly available Weibo and PHEME datasets released by Zheng et al. (2023) and Zubiaga et al. (2017).
